@@ -1,0 +1,70 @@
+# Escalation Rules for Customer Support Agent
+# Defines when and how to escalate customer inquiries
+
+escalation_rules:
+  priority_keywords:
+    urgent:
+      - "emergency"
+      - "critical"
+      - "down"
+      - "not working"
+      - "production issue"
+      - "server error"
+    high:
+      - "billing"
+      - "payment"
+      - "refund"
+      - "cancel"
+      - "upgrade"
+      - "security"
+    medium:
+      - "feature request"
+      - "enhancement"
+      - "suggestion"
+      - "improvement"
+
+  escalation_triggers:
+    sentiment_threshold: -0.3  # Negative sentiment below this triggers escalation
+    unresolved_attempts: 3     # Number of failed resolution attempts
+    response_time_exceeded: 30 # Minutes without agent response
+    
+  escalation_paths:
+    technical_issues:
+      department: "Technical Support"
+      contact: "tech-support@company.com"
+      sla: "2 hours"
+      
+    billing_issues:
+      department: "Billing"
+      contact: "billing@company.com"
+      sla: "4 hours"
+      
+    account_issues:
+      department: "Account Management"
+      contact: "accounts@company.com"
+      sla: "1 business day"
+      
+    general_escalation:
+      department: "Customer Success"
+      contact: "support@company.com"
+      sla: "24 hours"
+
+  auto_responses:
+    escalation_initiated:
+      message: "I understand this is important to you. I'm escalating your request to our specialized team who will be in touch within {sla}."
+    
+    follow_up_required:
+      message: "I want to ensure we resolve this for you. Let me connect you with a specialist who can provide more detailed assistance."
+
+  notification_settings:
+    escalation_channels:
+      - "email"
+      - "slack"
+      - "internal_ticket_system"
+    
+    escalation_template:
+      subject: "Customer Support Escalation - {ticket_id}"
+      priority: "{priority_level}"
+      customer_info: "{customer_name} - {customer_email}"
+      issue_summary: "{issue_description}"
+      agent_notes: "{agent_notes}"
