@@ -1,0 +1,28 @@
+{
+  "faq_responses": {
+    "platform_overview": {
+      "question": "What is the AI Agent Platform?",
+      "response": "The AI Agent Platform is a comprehensive solution for building, managing, and orchestrating intelligent AI agents. It integrates with Google AI Studio, Google Workspace apps, Gemini API, and GitHub to enable business process automation."
+    },
+    "getting_started": {
+      "question": "How do I get started with the platform?",
+      "response": "To get started: 1) Sign up for an account, 2) Connect your Google AI Studio and workspace, 3) Choose from our pre-built agent templates or create a custom agent, 4) Configure your agent's settings and prompts, 5) Deploy and test your agent."
+    },
+    "integrations": {
+      "question": "What integrations are supported?",
+      "response": "We support integrations with Google AI Studio, all Google Workspace apps (Gmail, Drive, Docs, Sheets, etc.), Gemini API, GitHub, and more. Our platform is designed to be extensible for additional integrations."
+    },
+    "pricing": {
+      "question": "What are your pricing plans?",
+      "response": "We offer flexible pricing based on usage and features. Please visit our pricing page or contact our sales team for detailed information about plans that fit your needs."
+    },
+    "technical_support": {
+      "question": "How do I get technical support?",
+      "response": "You can reach our technical support team through our help center, live chat, or by submitting a support ticket. Our team is available 24/7 to assist with any technical issues."
+    },
+    "agent_customization": {
+      "question": "Can I customize my AI agents?",
+      "response": "Yes! Our platform allows full customization of agent behavior, prompts, integrations, and workflows. You can modify existing templates or build completely custom agents from scratch."
+    }
+  }
+}
